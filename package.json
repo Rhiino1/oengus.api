@@ -1,6 +1,6 @@
 {
-  "name": "oengus.api",
-  "version": "0.1.0",
+  "name": "oengus.api.js",
+  "version": "0.1.1",
   "description": "NodeJS application for getting Oengus API data.",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
