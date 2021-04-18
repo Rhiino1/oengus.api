@@ -1,4 +1,4 @@
-# Oengus.api
+# Oengus.api.js
 
 [![Contributor Covenant](https://img.shields.io/david/axios/axios?label=axios&style=plastic)](https://www.npmjs.com/package/axios)
 
