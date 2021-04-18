@@ -1,4 +1,4 @@
-const get = require('../lib/api');
+const get = require('../lib/api')
 const {
   isUser,
   isMarathon,
@@ -15,7 +15,7 @@ const {
   Bid,
   Incentive,
   MarathonDonationStats
-} = require('./models')
+} = require('../lib/models')
 
 
 /**

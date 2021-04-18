@@ -13,11 +13,25 @@ npm install oengus.api.js
 ## Usage
 
 ```javascript
-const oengusAPI = require('./api');
+const oengusAPI = require('oengus.api.js');
 
-oengusAPI.getMarathon(`marathon's id`).then(data =>{console.log(data);}); // returns Marathon instance
-oengusAPI.getUser(`username`).then(data =>{console.log(data);}); // returns User instance 
-oengusAPI.getSchedule(`marathon's id`).then(data =>{console.log(data);}); // returns Schedule instance 
+oengusAPI.getMarathon('marathonId').then(data => {
+  console.log(data);
+}).catch(err => {
+  console.error(err);
+}); // returns Marathon instance
+
+oengusAPI.getUser('username').then(data => {
+  console.log(data);
+}).catch(err => {
+  console.error(err);
+}); // returns User instance 
+
+oengusAPI.getSchedule('marathonId').then(data => {
+  console.log(data);
+}).catch(err => {
+  console.error(err);
+}); // returns Schedule instance 
 ```
 
 ## License
