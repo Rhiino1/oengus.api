@@ -7,7 +7,7 @@ Oengus.api is a NodeJS library for dealing with Oengus API requests.
 ## Installation
 
 ```bash
-npm install oengus.api
+npm install oengus.api.js
 ```
 
 ## Usage

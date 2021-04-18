@@ -1,6 +1,6 @@
 {
   "name": "oengus.api.js",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "NodeJS application for getting Oengus API data.",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
@@ -24,5 +24,20 @@
   "devDependencies": {
     "microbundle": "^0.13.0"
   },
-  "files": ["dist", "package.json", "README.md"]
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csolanoc/oengus.api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/csolanoc/oengus.api/issues"
+  },
+  "homepage": "https://github.com/csolanoc/oengus.api#readme"
 }
