@@ -5,7 +5,8 @@ const {
   isBid,
   isIncentive,
   isSchedule,
-  isMarathonDonationStats
+  isMarathonDonationStats,
+  isDonation
 } = require('../lib/comparators')
 const {
   User,
@@ -14,7 +15,8 @@ const {
   Schedule,
   Bid,
   Incentive,
-  MarathonDonationStats
+  MarathonDonationStats,
+  Donation
 } = require('../lib/models')
 
 
@@ -111,10 +113,29 @@ const getMarathonDonationStats = async (id) => {
   throw new Error('Response could not parse Stats.');
 }
 
+/**
+ * 
+ * @param {string} id name/id of the marathon
+ * @param {number} page number of page to show starting from 0
+ * @param {*} size number of donations to show
+ * @returns {[Donation]} Donations array from the marathon
+ */
+const getDonationPage = async (id, page, size) => {
+  const response = await get(`marathons/${id}/donations?page=${page}&size=${size}`);
+
+  return response.data.content.map(donation => {
+    if (isDonation(donation)) {
+      return new Donation(donation.id, donation.nickname, donation.date, donation.amount, donation.comment, donation.donationIncentiveLinks);
+    }
+    throw new Error(`Response could not parse Donations. Donation[${donation.id}]`);
+  })
+}
+
 module.exports = {
   getUser,
   getMarathon,
   getSchedule,
   getIncentives,
-  getMarathonDonationStats
+  getMarathonDonationStats,
+  getDonationPage
 }
