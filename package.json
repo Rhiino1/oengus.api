@@ -1,6 +1,6 @@
 {
   "name": "oengus.api.js",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "NodeJS application for getting Oengus API data.",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
@@ -8,9 +8,8 @@
   "source": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.js",
-    "prod": " parcel build src/index.js",
-    "prepublish": "npm run prod"
+    "build": "microbundle",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "API",
@@ -23,10 +22,11 @@
     "axios": "^0.21.1"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "microbundle": "^0.13.0"
   },
   "files": [
     "dist",
+    "lib",
     "package.json",
     "README.md"
   ],
