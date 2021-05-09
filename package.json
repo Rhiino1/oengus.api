@@ -8,8 +8,9 @@
   "source": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "microbundle",
-    "prepublish": "npm run build"
+    "dev": "parcel src/index.js",
+    "prod": " parcel build src/index.js",
+    "prepublish": "npm run prod"
   },
   "keywords": [
     "API",
@@ -22,11 +23,10 @@
     "axios": "^0.21.1"
   },
   "devDependencies": {
-    "microbundle": "^0.13.0"
+    "parcel-bundler": "^1.12.5"
   },
   "files": [
     "dist",
-    "lib",
     "package.json",
     "README.md"
   ],
