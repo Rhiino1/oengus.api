@@ -25,13 +25,31 @@ oengusAPI.getUser('username').then(data => {
   console.log(data);
 }).catch(err => {
   console.error(err);
-}); // returns User instance 
+}); // returns User instance
 
 oengusAPI.getSchedule('marathonId').then(data => {
   console.log(data);
 }).catch(err => {
   console.error(err);
-}); // returns Schedule instance 
+}); // returns Schedule instance
+
+oengusAPI.getIncentives('marathonId').then(data => {
+  console.log(data);
+}).catch(err => {
+  console.error(err);
+}); // returns array of Incentives instance
+
+oengusAPI.getMarathonDonationStats('marathonId').then(data => {
+  console.log(data);
+}).catch(err => {
+  console.error(err);
+}); // returns Marathon stats instance
+
+oengusAPI.getDonationPage('marathonId', page, size).then(data => {
+  console.log(data);
+}).catch(err => {
+  console.error(err);
+}); // returns array of donation instance with size from page
 ```
 
 ## License
